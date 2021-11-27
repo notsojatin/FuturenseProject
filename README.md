@@ -4,7 +4,7 @@
 Zookeeper connection: zookeeper-server-start.bat ../../config/zookeeper.properties
 
 
-start kafka server : kafka-server-start.bat ..\..\config\server.properties
+start kafka server : kafka-server-start.bat ..\\..\\config\server.properties
 
 
 Topic Creation : kafka-topics.bat --create --topic stockTopic --zookeeper localhost:2181 --partitions 3 --replication-factor 3
