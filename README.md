@@ -16,4 +16,4 @@ Topic Describe : kafka-topics.bat --describe --topic stockTopic --zookeeper loca
 Producer Start: kafka-console-producer.bat --broker-list localhost:9092 --topic stockTopic
 
 
-Consumer Satrt: kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stockTopic --from-beginning\n
+Consumer Satrt: kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stockTopic --from-beginning
