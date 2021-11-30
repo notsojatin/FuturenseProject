@@ -1,0 +1,32 @@
+directory cmd commands should be run : "C:\kafka_2.11-1.1.1\bin\windows"
+Zookeeper connection: zookeeper-server-start.bat ../../config/zookeeper.properties
+start kafka server : kafka-server-start.bat ..\..\config\server.properties
+Topic Creation : kafka-topics.bat --create --topic topicJava --zookeeper localhost:2181 --partitions 3 --replication-factor 3
+Topic Describe : kafka-topics.bat --describe --topic topicJava --zookeeper localhost:2181
+Producer Start: kafka-console-producer.bat --broker-list localhost:9092 --topic topic1
+Consumer Satrt: kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stockTopic --from-beginning
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic transformedStockTopic --from-beginning
+
+kafka-consumer-group.bat --bootstrap-server localhost:9092 --topic transformedStockTopic
+
+
+kafka-topics.bat --create --topic stockTopic --zookeeper localhost:2181 --partitions 5 --replication-factor 1
+kafka-topics.bat --create --topic transformedStockTopic --zookeeper localhost:2181 --partitions 5 --replication-factor 1
+
+
+
+kafka-topics.bat --zookeeper localhost:2181 --delete --topic stockTopic
+kafka-topics.bat --zookeeper localhost:2181 --delete --topic transformedStockTopic
+
+
+C:\Users\Futurense123\anaconda3\Scripts\activate.bat
+
+
+zookeeper-server-start.bat ../../config/zookeeper.properties
+
+kafka-server-start.bat ..\..\config\server.properties
+
+kafka-topics.bat --describe --topic stockTopic --zookeeper localhost:2181
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stockTopic
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic transformedStockTopic
